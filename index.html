@@ -1,10 +1,232 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraPulse Audio | High-Fidelity Sound Experience</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+  <!-- Name : Md.Sahadat Hossain | ID : 2221634 -->
+
+  <!-- Site Header (Requirement 2 & 3) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="AuraPulse Audio Home">
+        <span class="logo-icon">🔊</span>
+        <span>AuraPulse<span class="highlight">Audio</span></span>
+      </a>
+
+      <!-- Navigation Bar with Hover Effects (Requirement 3) -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Action Button with onclick handler (Requirement 6) -->
+      <div class="header-actions">
+        <button class="cart-btn" onclick="openCartModal()" aria-label="View Shopping Cart">
+          <span>🛒 Cart</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION (Requirement 5: Uses display: flex via .hero-flex-container) -->
+    <section class="hero-flex-section">
+      <div class="container hero-flex-container">
+        
+        <!-- Hero Text Content (Requirement 4: Detailed Paragraphs) -->
+        <div class="hero-text-content">
+          <span class="hero-badge">✨ Next-Generation Acoustic Innovation</span>
+          <h1 class="hero-title">Immerse Yourself in <span class="highlight">Pure, Lossless</span> Studio Audio</h1>
+          
+          <!-- Paragraph 1 -->
+          <p class="hero-paragraph">
+            Welcome to AuraPulse Audio, where precision acoustic engineering meets state-of-the-art wireless freedom. We design high-fidelity audio equipment created for musicians, audiophiles, and discerning music lovers worldwide. Our products combine custom bio-cellulose drivers, proprietary adaptive noise reduction, and aerospace-grade ergonomic materials to deliver unprecedented sonic clarity, deep resonant bass, and crystalline vocals that make every listening session an unforgettable studio experience.
+          </p>
+
+          <!-- Paragraph 2 -->
+          <p class="hero-paragraph">
+            Whether you are producing master tracks in a professional recording booth, commuting across bustling city transit, or working in demanding creative environments, AuraPulse audio hardware adapts dynamically to your surroundings. With up to 40 hours of continuous high-resolution wireless playback, ultra-low-latency Bluetooth 5.4 codecs, and customizable spatial sound profiles, your favorite albums and media are brought to life exactly as the original sound artists intended.
+          </p>
+
+          <!-- Interactive Action Buttons with onclick (Requirement 6) -->
+          <div class="hero-button-group">
+            <button class="btn btn-primary" onclick="claimOffer()">
+              🎉 Claim 15% VIP Discount
+            </button>
+            <button class="btn btn-secondary" onclick="playAudioDemo()">
+              🔊 Test Acoustic Frequency
+            </button>
+            <a href="products.html" class="btn btn-outline">
+              Browse Audio Gear &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Image (Requirement 4: Image 1 on Home Page) -->
+        <div class="hero-image-wrapper">
+          <img src="images/hero-headphones.svg" alt="AuraPulse Flagship Wireless Noise Cancelling Headphones" class="hero-image" width="600" height="450">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY FEATURES SECTION (Uses display: flex via .features-flex-container) -->
+    <section class="section-padding features-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Engineered for Acoustic Perfection</h2>
+          <p class="section-subtitle">Discover the groundbreaking acoustic innovations that set AuraPulse audio devices apart from conventional audio gear.</p>
+        </div>
+
+        <div class="features-flex-container">
+          <div class="feature-card">
+            <span class="feature-icon">🛡️</span>
+            <h3>Adaptive Hybrid ANC</h3>
+            <p>Quad-microphone noise cancellation continuously attenuates up to 40dB of ambient environmental noise in real-time.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>40-Hour Ultra Battery</h3>
+            <p>Fast USB-C Power Delivery provides 6 full hours of high-definition playback from just 10 minutes of quick charging.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">💎</span>
+            <h3>Hi-Res Lossless Audio</h3>
+            <p>Certified 96kHz / 24-bit wireless LDAC streaming preserves authentic harmonic overtones and instrument separation.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🎧</span>
+            <h3>Memory Foam Comfort</h3>
+            <p>Pressure-relieving protein leather cushions distribute weight evenly for comfortable listening during extended studio sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACOUSTIC CRAFTSMANSHIP SECTION (Requirement 4: Image 2 & More Paragraphs on Home Page) -->
+    <section class="section-padding">
+      <div class="container craft-flex-container">
+        
+        <!-- Image 2 on Home Page -->
+        <div class="craft-image-wrapper">
+          <img src="images/sound-craft.svg" alt="Acoustic Bio-Cellulose Driver Diaphragm and Sound Waves" class="hero-image" width="600" height="450">
+        </div>
+
+        <!-- Descriptive Paragraphs for Craftsmanship -->
+        <div class="craft-text-content">
+          <span class="hero-badge">🔬 Master Engineering</span>
+          <h2>Acoustic Precision Backed by Rigorous Laboratory Testing</h2>
+          
+          <p class="craft-paragraph">
+            Every AuraPulse speaker driver is rigorously calibrated in an anechoic sound laboratory to ensure a ruler-flat frequency curve spanning 5 Hz to 45,000 Hz. Our proprietary bio-cellulose diaphragm material is lightweight yet structurally rigid, completely eliminating unwanted harmonic distortion even when driving bass-heavy audio passages at peak amplifier volumes.
+          </p>
+
+          <p class="craft-paragraph">
+            We hold our production line to military-grade standards. From CNC-milled aluminum hinge assemblies to sweatproof nano-coatings, every structural component is engineered to withstand years of active daily travel. Plus, all customer purchases are protected by our complimentary 2-year manufacturer warranty and 30-day money-back satisfaction guarantee.
+          </p>
+
+          <!-- Interactive Button with onclick (Requirement 6) -->
+          <div style="margin-top: 1.5rem;">
+            <button class="btn btn-accent" onclick="addToCart('Aura Pulse Elite Flagship', 199.99)">
+              ⚡ Quick Buy Flagship ($199.99)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VIP Promotion & Newsletter Banner -->
+      <div class="container">
+        <div class="vip-offer-banner">
+          <div class="vip-text">
+            <h3>Subscribe to AuraPulse VIP Sound Club</h3>
+            <p>Get exclusive early access to firmware updates, acoustic presets, and student discount codes.</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <input type="email" id="newsletter-email" class="form-control" placeholder="Enter your email address" style="width: 260px;">
+            <!-- Button with onclick event handler (Requirement 6) -->
+            <button class="btn btn-primary" onclick="subscribeNewsletter(event)">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Modal Container for JS Actions -->
+  <div class="modal-overlay" id="app-modal" onclick="if(event.target===this) closeModal()">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close dialog">&times;</button>
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- Site Footer (Requirement 2) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon">🔊</span>
+            <span>AuraPulse Audio</span>
+          </div>
+          <p>
+            Premium sound technology engineered with passion. Delivering studio-grade headphones, earbuds, soundbars, and microphones to discerning audiophiles.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="products.html">Products Catalog</a></li>
+            <li><a href="contact.html">Contact Us & Support</a></li>
+            <li><a href="javascript:void(0)" onclick="openCartModal()">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="showToast('Free express shipping on all domestic orders over $50!', 'info')">Shipping Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Every unit includes a 2-year direct replacement warranty.', 'info')">Warranty Details</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('30-day hassle-free return and exchange guarantee.', 'info')">Returns & Exchanges</a></li>
+            <li><a href="javascript:void(0)" onclick="claimOffer()">Claim Student Discount</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Project Submission</h4>
+          <div class="student-credit-box">
+            <strong>Course: MIS 455</strong>
+            <p>Student Name: <strong>Md.Sahadat Hossain</strong></p>
+            <p>Student ID: <strong>2221634</strong></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AuraPulse Audio Inc. Developed by Md.Sahadat Hossain (ID: 2221634). All rights reserved.</p>
+        <p>Built with Semantic HTML5, Modern CSS3 Flexbox/Grid, and Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
