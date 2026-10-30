@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" rx="16" fill="url(#sbBg)"/>
+  
+  <!-- Soundbar body -->
+  <rect x="50" y="150" width="300" height="45" rx="10" fill="#0f172a" stroke="#475569" stroke-width="2.5"/>
+  <rect x="60" y="156" width="280" height="33" rx="6" fill="#1e293b"/>
+  
+  <!-- Speaker grill mesh dots -->
+  <g fill="#475569" opacity="0.6">
+    <circle cx="80" cy="172" r="3"/><circle cx="95" cy="172" r="3"/><circle cx="110" cy="172" r="3"/>
+    <circle cx="125" cy="172" r="3"/><circle cx="140" cy="172" r="3"/><circle cx="155" cy="172" r="3"/>
+    <circle cx="245" cy="172" r="3"/><circle cx="260" cy="172" r="3"/><circle cx="275" cy="172" r="3"/>
+    <circle cx="290" cy="172" r="3"/><circle cx="305" cy="172" r="3"/><circle cx="320" cy="172" r="3"/>
+  </g>
+  
+  <!-- Center display OLED screen -->
+  <rect x="180" y="162" width="40" height="20" rx="4" fill="#000" stroke="#06b6d4" stroke-width="1"/>
+  <text x="200" y="176" font-family="'Segoe UI', Roboto, monospace" font-size="9" fill="#06b6d4" text-anchor="middle">ATMOS</text>
+  
+  <!-- Wireless Subwoofer beside/behind -->
+  <rect x="155" y="65" width="90" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <circle cx="200" cy="100" r="22" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+  <circle cx="200" cy="100" r="8" fill="#38bdf8"/>
+
+  <!-- Soundwaves spreading -->
+  <path d="M 40 172 Q 25 150 40 130" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+  <path d="M 360 172 Q 375 150 360 130" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+
+  <text x="200" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">AURA CINEMA DOLBY SOUNDBAR</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="supBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="450" rx="20" fill="url(#supBg)"/>
+
+  <!-- Customer Support Specialist Graphic -->
+  <g transform="translate(180, 80)">
+    <!-- Aura halo glow -->
+    <circle cx="120" cy="110" r="100" fill="#06b6d4" opacity="0.12"/>
+    
+    <!-- Torso/Shoulders -->
+    <path d="M 40 230 C 40 180, 200 180, 200 230 Z" fill="#334155"/>
+    <path d="M 60 230 C 60 190, 180 190, 180 230 Z" fill="#0284c7"/>
+    
+    <!-- Collar & Tie/Badge -->
+    <polygon points="120,190 105,215 135,215" fill="#f8fafc"/>
+    <rect x="115" y="215" width="10" height="15" fill="#0284c7"/>
+
+    <!-- Head & Face -->
+    <circle cx="120" cy="125" r="45" fill="#fcd34d"/>
+    <!-- Hair -->
+    <path d="M 75 120 C 75 70, 165 70, 165 120 C 150 85, 90 85, 75 120 Z" fill="#1e293b"/>
+    <!-- Smile -->
+    <path d="M 108 145 Q 120 155 132 145" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="107" cy="125" r="4" fill="#1e293b"/>
+    <circle cx="133" cy="125" r="4" fill="#1e293b"/>
+
+    <!-- Customer Care Headset -->
+    <path d="M 72 125 C 72 70, 168 70, 168 125" fill="none" stroke="#64748b" stroke-width="6"/>
+    <!-- Headset ear cup -->
+    <rect x="66" y="115" width="12" height="24" rx="5" fill="#0ea5e9"/>
+    <!-- Headset boom mic -->
+    <path d="M 72 135 Q 85 155 110 150" fill="none" stroke="#64748b" stroke-width="3"/>
+    <circle cx="112" cy="150" r="5" fill="#0ea5e9"/>
+  </g>
+
+  <!-- Floating Help & SLA Tags -->
+  <g transform="translate(60, 60)">
+    <rect width="140" height="42" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="25" cy="21" r="6" fill="#10b981"/>
+    <text x="42" y="26" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ecfdf5">24/7 Live Desk</text>
+  </g>
+
+  <g transform="translate(390, 70)">
+    <rect width="150" height="42" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="75" y="26" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#e0f2fe" text-anchor="middle">&lt; 15 Min Response</text>
+  </g>
+
+  <g transform="translate(80, 340)">
+    <rect width="160" height="44" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="80" y="27" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ede9fe" text-anchor="middle">2-Year Free Warranty</text>
+  </g>
+
+  <g transform="translate(360, 340)">
+    <rect width="180" height="44" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="90" y="27" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#fef3c7" text-anchor="middle">Hassle-Free Returns</text>
+  </g>
+</svg>
