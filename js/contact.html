@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraPulse Audio | Contact Us & Acoustic Studio Support</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Name : Md.Sahadat Hossain | ID : 2221634 -->
+
+  <!-- Site Header (Requirement 2 & 3) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="AuraPulse Audio Home">
+        <span class="logo-icon">🔊</span>
+        <span>AuraPulse<span class="highlight">Audio</span></span>
+      </a>
+
+      <!-- Navigation Bar with Hover Effects (Requirement 3) -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Action Button with onclick handler (Requirement 6) -->
+      <div class="header-actions">
+        <button class="cart-btn" onclick="openCartModal()" aria-label="View Shopping Cart">
+          <span>🛒 Cart</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- PAGE HEADER INTRO (Requirement 4: At least 2 Detailed Paragraphs) -->
+    <section class="page-header-intro">
+      <div class="container">
+        <span class="hero-badge">💬 Dedicated Support & Experience Centers</span>
+        <h1>We Are Here to Assist Your Sound Journey</h1>
+        
+        <!-- Paragraph 1 -->
+        <p>
+          At AuraPulse Audio, we take immense pride in delivering world-class customer service alongside our premium acoustic devices. Whether you need technical troubleshooting assistance for multi-point Bluetooth pairing, guidance selecting the ideal sound profile for your personal studio workspace, or immediate processing for warranty claims and hardware replacements, our dedicated audio support engineers are available round-the-clock to guarantee an effortless customer experience.
+        </p>
+
+        <!-- Paragraph 2 -->
+        <p>
+          We also warmly invite audiophiles and creators to visit our flagship Acoustic Experience Studio. Experience lossless audio demos firsthand inside our purpose-built sound lounge, compare frequency response dynamics across our entire product range, and receive tailored advice from our master acoustic technicians. Feel free to reach out via the digital dispatch form below, visit our physical studio, or schedule an in-person acoustic audition session.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT & SHOWROOM SECTION -->
+    <section class="section-padding" style="padding-top: 2.5rem;">
+      <div class="container">
+        
+        <div class="contact-layout-flex">
+          
+          <!-- Left Column: Support Info & Media Showcase (Requirement 4: 2 Images on Contact Page) -->
+          <div class="contact-info-panel">
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff;">Get in Touch Directly</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Reach our audio engineering desk via any of our official channels or book a consultation at our studio headquarters.
+            </p>
+
+            <!-- Quick Info Cards Grid -->
+            <div class="contact-card-grid">
+              <div class="info-box">
+                <span class="info-icon">📍</span>
+                <h4>Studio Address</h4>
+                <p>Plot 15, Block B, Aftabnagar, Dhaka-1212, Bangladesh</p>
+              </div>
+
+              <div class="info-box">
+                <span class="info-icon">📞</span>
+                <h4>Direct Phone</h4>
+                <p>+880 (02) 887-2401<br>Toll-Free: 1-800-AURAPULSE</p>
+              </div>
+
+              <div class="info-box">
+                <span class="info-icon">✉️</span>
+                <h4>Email Support</h4>
+                <p>support@aurapulse-audio.com<br>care@aurapulse.org</p>
+              </div>
+
+              <div class="info-box">
+                <span class="info-icon">⏰</span>
+                <h4>Operating Hours</h4>
+                <p>Mon - Sat: 9:00 AM - 9:00 PM<br>24/7 Email Ticket Response</p>
+              </div>
+            </div>
+
+            <!-- Media Showcase: Image 1 & Image 2 (Requirement 4: 2 Images on Contact Page) -->
+            <div class="contact-media-showcase">
+              
+              <!-- Image 1 on Contact Page -->
+              <div class="contact-image-wrapper">
+                <img src="images/support-team.svg" alt="AuraPulse Dedicated 24/7 Customer Support Desk" width="600" height="450">
+              </div>
+
+              <!-- Image 2 on Contact Page -->
+              <div class="contact-image-wrapper">
+                <img src="images/store-location.svg" alt="AuraPulse Flagship Audio Experience Studio Map" width="600" height="450">
+              </div>
+
+            </div>
+
+            <!-- Studio Booking Action Button with onclick (Requirement 6) -->
+            <div style="margin-top: 1.5rem;">
+              <button class="btn btn-secondary" onclick="scheduleAudioDemo()" style="width: 100%;">
+                🎧 Schedule VIP Studio Sound Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff;">Send an Inquiry</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+              Fill out the message dispatch form below. Our technical support specialists typically respond within 15 minutes.
+            </p>
+
+            <form id="contact-form" onsubmit="event.preventDefault(); submitContactForm();">
+              
+              <div class="form-group">
+                <label for="contact-name">Full Name <span style="color: var(--accent-rose); font-weight: bold;">*</span></label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Md.Sahadat Hossain" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address <span style="color: var(--accent-rose); font-weight: bold;">*</span></label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. sahadat@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Inquiry Subject</label>
+                <select id="contact-subject" class="form-control">
+                  <option value="Hardware Support & Warranty">Hardware Support & Warranty Claim</option>
+                  <option value="Product Recommendation">Product Consultation & Advice</option>
+                  <option value="Order Tracking">Online Order Tracking & Status</option>
+                  <option value="VIP Studio Demo">Book Flagship Listening Lounge Demo</option>
+                  <option value="Academic Course Project">Academic Evaluation / MIS 455 Feedback</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message Details <span style="color: var(--accent-rose); font-weight: bold;">*</span></label>
+                <textarea id="contact-message" class="form-control" placeholder="Please describe how we can assist you with our audio products..." required></textarea>
+              </div>
+
+              <!-- Action Buttons with onclick event handlers (Requirement 6) -->
+              <div class="form-buttons">
+                <button type="button" class="btn btn-primary" onclick="submitContactForm()">
+                  ✉️ Send Message
+                </button>
+                <button type="button" class="btn btn-outline" onclick="resetContactForm()">
+                  🔄 Clear Fields
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Modal Container for JS Actions -->
+  <div class="modal-overlay" id="app-modal" onclick="if(event.target===this) closeModal()">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close dialog">&times;</button>
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- Site Footer (Requirement 2) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon">🔊</span>
+            <span>AuraPulse Audio</span>
+          </div>
+          <p>
+            Premium sound technology engineered with passion. Delivering studio-grade headphones, earbuds, soundbars, and microphones to discerning audiophiles.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="products.html">Products Catalog</a></li>
+            <li><a href="contact.html">Contact Us & Support</a></li>
+            <li><a href="javascript:void(0)" onclick="openCartModal()">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="showToast('Free express shipping on all domestic orders over $50!', 'info')">Shipping Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Every unit includes a 2-year direct replacement warranty.', 'info')">Warranty Details</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('30-day hassle-free return and exchange guarantee.', 'info')">Returns & Exchanges</a></li>
+            <li><a href="javascript:void(0)" onclick="claimOffer()">Claim Student Discount</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Project Submission</h4>
+          <div class="student-credit-box">
+            <strong>Course: MIS 455</strong>
+            <p>Student Name: <strong>Md.Sahadat Hossain</strong></p>
+            <p>Student ID: <strong>2221634</strong></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AuraPulse Audio Inc. Developed by Md.Sahadat Hossain (ID: 2221634). All rights reserved.</p>
+        <p>Built with Semantic HTML5, Modern CSS3 Flexbox/Grid, and Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
