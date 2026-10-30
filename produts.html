@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraPulse Audio | High-Fidelity Products & Sound Hardware</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Name : Md.Sahadat Hossain | ID : 2221634 -->
+
+  <!-- Site Header (Requirement 2 & 3) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="AuraPulse Audio Home">
+        <span class="logo-icon">🔊</span>
+        <span>AuraPulse<span class="highlight">Audio</span></span>
+      </a>
+
+      <!-- Navigation Bar with Hover Effects (Requirement 3) -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Action Button with onclick handler (Requirement 6) -->
+      <div class="header-actions">
+        <button class="cart-btn" onclick="openCartModal()" aria-label="View Shopping Cart">
+          <span>🛒 Cart</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- PAGE HEADER INTRO (Requirement 4: At least 2 Detailed Paragraphs) -->
+    <section class="page-header-intro">
+      <div class="container">
+        <span class="hero-badge">💎 2026 Studio Collection</span>
+        <h1>Engineered for Audiophiles & Creators</h1>
+        
+        <!-- Paragraph 1 -->
+        <p>
+          Explore our complete collection of studio-grade acoustic transducers, precision wireless audio monitors, smart soundbars, and broadcast microphones. Every item in the AuraPulse catalog has undergone extensive acoustic balancing in anechoic chambers to ensure linear sonic fidelity, ultra-low harmonic distortion, and an immersive soundstage that elevates music, gaming, movies, and high-resolution spatial recordings.
+        </p>
+
+        <!-- Paragraph 2 -->
+        <p>
+          We pride ourselves on using durable, sustainably sourced materials including aircraft-grade magnesium alloys, bio-cellulose speaker membranes, and hypoallergenic memory foam ear cushions. Backed by our standard 2-year international warranty, lifetime firmware improvements, and 30-day trial period, our hardware empowers your listening journey with complete confidence and peace of mind.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCT CATALOG SECTION -->
+    <section class="section-padding" style="padding-top: 1.5rem;">
+      <div class="container">
+        
+        <!-- Category Filter Buttons with onclick event handlers (Requirement 6) -->
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterCategory('all', this)">All Hardware (6)</button>
+          <button class="filter-btn" onclick="filterCategory('headphones', this)">Over-Ear Headphones</button>
+          <button class="filter-btn" onclick="filterCategory('earbuds', this)">Wireless Earbuds</button>
+          <button class="filter-btn" onclick="filterCategory('speakers', this)">Home & Soundbars</button>
+          <button class="filter-btn" onclick="filterCategory('studio', this)">Studio & Microphones</button>
+        </div>
+
+        <!-- PRODUCTS GRID (Mandatory Requirement 5: Uses display: grid via .products-grid) -->
+        <div class="products-grid">
+          
+          <!-- Product Card 1 (Image 1 on Products Page) -->
+          <article class="product-card" data-category="headphones">
+            <span class="product-badge badge-flagship">Flagship</span>
+            <div class="product-image-container">
+              <img src="images/product-pro-headphones.svg" alt="Aura Pulse Elite Wireless Noise Cancelling Headphones" width="400" height="320">
+            </div>
+            <div class="product-details">
+              <span class="product-category">Headphones</span>
+              <h3 class="product-title">Aura Pulse Elite</h3>
+              <div class="product-rating">
+                <span>★★★★★</span>
+                <span class="rating-count">(4.9 / 5 &bull; 142 reviews)</span>
+              </div>
+              <p class="product-description">
+                Flagship over-ear wireless headphones with hybrid active noise cancellation, custom 45mm neodymium drivers, and 40-hour battery life.
+              </p>
+              <ul class="product-features-list">
+                <li>✓ 40dB Adaptive Noise Cancellation</li>
+                <li>✓ LDAC / AAC 96kHz Lossless Codecs</li>
+                <li>✓ Multi-point dual device pairing</li>
+              </ul>
+              <div class="product-footer">
+                <span class="product-price">$199.99</span>
+                <div class="product-actions">
+                  <button class="btn btn-sm btn-secondary" onclick="openQuickView('Aura Pulse Elite', 199.99, '45mm Bio-Cellulose Driver, 40-Hour Battery, Hybrid ANC -40dB, Weight: 250g, Frequency: 5Hz-45kHz')">
+                    Specs
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('Aura Pulse Elite', 199.99)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 (Image 2 on Products Page) -->
+          <article class="product-card" data-category="earbuds">
+            <span class="product-badge badge-new">New Release</span>
+            <div class="product-image-container">
+              <img src="images/product-earbuds.svg" alt="Aura Buds Pro True Wireless Noise Cancelling Earbuds" width="400" height="320">
+            </div>
+            <div class="product-details">
+              <span class="product-category">Wireless Earbuds</span>
+              <h3 class="product-title">Aura Buds Pro</h3>
+              <div class="product-rating">
+                <span>★★★★★</span>
+                <span class="rating-count">(4.8 / 5 &bull; 98 reviews)</span>
+              </div>
+              <p class="product-description">
+                Compact true wireless earbuds with intelligent spatial audio head tracking, wireless charging case, and crystal-clear triple mic array.
+              </p>
+              <ul class="product-features-list">
+                <li>✓ 32-Hour Total Battery with Qi Case</li>
+                <li>✓ IPX7 Water and Sweat Resistance</li>
+                <li>✓ Transparency Ambient Sound Mode</li>
+              </ul>
+              <div class="product-footer">
+                <span class="product-price">$129.99</span>
+                <div class="product-actions">
+                  <button class="btn btn-sm btn-secondary" onclick="openQuickView('Aura Buds Pro', 129.99, '11mm Graphene Drivers, 32-Hour Case Playtime, Qi Wireless Charging, IPX7 Waterproof, Bluetooth 5.4 LE')">
+                    Specs
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('Aura Buds Pro', 129.99)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 (Image 3 on Products Page) -->
+          <article class="product-card" data-category="speakers">
+            <span class="product-badge badge-hot">Popular</span>
+            <div class="product-image-container">
+              <img src="images/product-soundbar.svg" alt="Aura Cinema Dolby Atmos 3D Home Soundbar with Wireless Subwoofer" width="400" height="320">
+            </div>
+            <div class="product-details">
+              <span class="product-category">Home Audio</span>
+              <h3 class="product-title">Aura Cinema Dolby Soundbar</h3>
+              <div class="product-rating">
+                <span>★★★★★</span>
+                <span class="rating-count">(4.9 / 5 &bull; 83 reviews)</span>
+              </div>
+              <p class="product-description">
+                5.1.2 channel Dolby Atmos 3D spatial surround soundbar accompanied by a dedicated down-firing wireless subwoofer for cinematic thunder.
+              </p>
+              <ul class="product-features-list">
+                <li>✓ 450W Peak Dynamic Acoustic Output</li>
+                <li>✓ eARC HDMI 2.1 & Optical Audio Input</li>
+                <li>✓ Dedicated Dialogue Vocal Enhancer</li>
+              </ul>
+              <div class="product-footer">
+                <span class="product-price">$349.99</span>
+                <div class="product-actions">
+                  <button class="btn btn-sm btn-secondary" onclick="openQuickView('Aura Cinema Soundbar', 349.99, '5.1.2 Spatial Dolby Atmos, 450W RMS Peak, HDMI eARC 2.1, AirPlay 2 & Spotify Connect, Subwoofer Included')">
+                    Specs
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('Aura Cinema Soundbar', 349.99)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 (Image 4 on Products Page) -->
+          <article class="product-card" data-category="speakers">
+            <span class="product-badge badge-new">Outdoor Ready</span>
+            <div class="product-image-container">
+              <img src="images/product-speaker.svg" alt="Aura Roam 360 Degree Rugged Waterproof Bluetooth Speaker" width="400" height="320">
+            </div>
+            <div class="product-details">
+              <span class="product-category">Portable Speakers</span>
+              <h3 class="product-title">Aura Roam 360° Speaker</h3>
+              <div class="product-rating">
+                <span>★★★★☆</span>
+                <span class="rating-count">(4.7 / 5 &bull; 64 reviews)</span>
+              </div>
+              <p class="product-description">
+                Ruggedized 360-degree omnidirectional outdoor Bluetooth speaker featuring dual passive radiators and an integrated utility carabiner lanyard.
+              </p>
+              <ul class="product-features-list">
+                <li>✓ IP67 Dustproof and Submersible</li>
+                <li>✓ 24-Hour Party Playtime Capacity</li>
+                <li>✓ Stereo Wireless Daisy-Chain Pairing</li>
+              </ul>
+              <div class="product-footer">
+                <span class="product-price">$89.99</span>
+                <div class="product-actions">
+                  <button class="btn btn-sm btn-secondary" onclick="openQuickView('Aura Roam 360 Speaker', 89.99, '360-Degree Sound Dispersion, IP67 Waterproof, 24-Hour Battery, USB-C Powerbank Feature, Weight: 550g')">
+                    Specs
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('Aura Roam 360 Speaker', 89.99)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 5 (Image 5 on Products Page) -->
+          <article class="product-card" data-category="earbuds">
+            <span class="product-badge badge-hot">Athletics</span>
+            <div class="product-image-container">
+              <img src="images/product-sport.svg" alt="Aura Fit Active Sport Ergonomic Running Earphones" width="400" height="320">
+            </div>
+            <div class="product-details">
+              <span class="product-category">Athletic Audio</span>
+              <h3 class="product-title">Aura Fit Active Sport</h3>
+              <div class="product-rating">
+                <span>★★★★★</span>
+                <span class="rating-count">(4.8 / 5 &bull; 53 reviews)</span>
+              </div>
+              <p class="product-description">
+                Ergonomic wrap-around ear-hook earphones designed for runners and gym enthusiasts with sweatproof hydrophobic acoustic mesh.
+              </p>
+              <ul class="product-features-list">
+                <li>✓ Non-Slip Secure Silicone Hook Mount</li>
+                <li>✓ IPX8 Sweatproof Nano-Shield Coating</li>
+                <li>✓ Fast 10-Minute Emergency Charge</li>
+              </ul>
+              <div class="product-footer">
+                <span class="product-price">$79.99</span>
+                <div class="product-actions">
+                  <button class="btn btn-sm btn-secondary" onclick="openQuickView('Aura Fit Active Sport', 79.99, 'IPX8 Waterproof, Memory Wire Titanium Frame, 18-Hour Battery, BassBoost EQ mode, Dual ENC Mics')">
+                    Specs
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('Aura Fit Active Sport', 79.99)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 6 (Image 6 on Products Page) -->
+          <article class="product-card" data-category="studio">
+            <span class="product-badge badge-flagship">Studio</span>
+            <div class="product-image-container">
+              <img src="images/product-mic.svg" alt="Aura Stream Studio USB Condenser Microphone for Podcasting and Streaming" width="400" height="320">
+            </div>
+            <div class="product-details">
+              <span class="product-category">Studio Gear</span>
+              <h3 class="product-title">Aura Stream Studio Mic</h3>
+              <div class="product-rating">
+                <span>★★★★★</span>
+                <span class="rating-count">(4.9 / 5 &bull; 112 reviews)</span>
+              </div>
+              <p class="product-description">
+                Professional 24-bit/192kHz USB condenser microphone with zero-latency headphone monitoring, four pickup patterns, and anti-vibration shockmount.
+              </p>
+              <ul class="product-features-list">
+                <li>✓ Cardioid / Omni / Bi-Directional Modes</li>
+                <li>✓ Tap-to-Mute Sensor with LED Indicator</li>
+                <li>✓ Heavyweight Cast-Steel Desktop Stand</li>
+              </ul>
+              <div class="product-footer">
+                <span class="product-price">$149.99</span>
+                <div class="product-actions">
+                  <button class="btn btn-sm btn-secondary" onclick="openQuickView('Aura Stream Studio Mic', 149.99, 'Triple 14mm Condenser Capsules, 24-bit/192kHz Sampling, Zero-Latency 3.5mm Jack, USB-C Plug-and-Play')">
+                    Specs
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('Aura Stream Studio Mic', 149.99)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Modal Container for JS Actions -->
+  <div class="modal-overlay" id="app-modal" onclick="if(event.target===this) closeModal()">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close dialog">&times;</button>
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- Site Footer (Requirement 2) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon">🔊</span>
+            <span>AuraPulse Audio</span>
+          </div>
+          <p>
+            Premium sound technology engineered with passion. Delivering studio-grade headphones, earbuds, soundbars, and microphones to discerning audiophiles.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="products.html">Products Catalog</a></li>
+            <li><a href="contact.html">Contact Us & Support</a></li>
+            <li><a href="javascript:void(0)" onclick="openCartModal()">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="showToast('Free express shipping on all domestic orders over $50!', 'info')">Shipping Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Every unit includes a 2-year direct replacement warranty.', 'info')">Warranty Details</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('30-day hassle-free return and exchange guarantee.', 'info')">Returns & Exchanges</a></li>
+            <li><a href="javascript:void(0)" onclick="claimOffer()">Claim Student Discount</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Project Submission</h4>
+          <div class="student-credit-box">
+            <strong>Course: MIS 455</strong>
+            <p>Student Name: <strong>Md.Sahadat Hossain</strong></p>
+            <p>Student ID: <strong>2221634</strong></p>
+          </div>
+        </div>
+
+      </div>
+
+
